@@ -1,0 +1,36 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:watch": "tsc -w",
+    "start:dev": "nodemon dist/server.js",
+    "start:prod": "NODE_ENV=production nodemon dist/server.js",
+    "start": "concurrently \"npm run start:watch\" \"npm run start:dev\" ",
+    "lint:ts": "npx eslint src/**/* ",
+    "lint:ts:fix": "npx eslint src/**/* --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "globals": "^15.1.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.8.0"
+  }
+}
